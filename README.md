@@ -6,8 +6,12 @@
 
 ## 样式预览
 
-![](https://raw.githubusercontent.com/Achuan-2/PicBed/pic/assets/20231215105536-2023-12-15.png)​
+pandoc 不设置模板导出 docx 的样式
 
+![](https://raw.githubusercontent.com/Achuan-2/PicBed/pic/assets/20231215114447-2023-12-15.png)
+
+设置本模板导出 docx 的样式
+![](https://raw.githubusercontent.com/Achuan-2/PicBed/pic/assets/20231215114500-2023-12-15.png)
 ## 模板分享
 
 有两个模板，一个标题自动编号，一个不自动编号，按需选用。
