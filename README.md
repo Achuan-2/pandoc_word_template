@@ -15,6 +15,21 @@
 * Github：[Achuan-2/pandoc_word_template ](https://github.com/Achuan-2/pandoc_word_template)
 * 蓝奏云：[https://achuan.lanzoul.com/b0f5y8sja](https://achuan.lanzoul.com/b0f5y8sja) （密码:a8om）
 
+
+## 如何使用此模板
+
+以思源笔记为例，在【设置】-【导出】-【导出 Word .docx模板路径】设置模板文件地址即可。
+
+![](https://raw.githubusercontent.com/Achuan-2/PicBed/pic/assets/20231215114355-2023-12-15.png)
+
+其他笔记软件请自行探索，pandoc是通过 `--reference-doc `参数设置模板路径的，可以用命令行调用下面命令：
+
+```bash
+pandoc --reference-doc template.docx -s input.md  -o output.docx
+```
+
+
+
 ## 如何修改此模板
 
 注意，要修改模板，需要更改每个类型对应的Word的样式，而不是只是自己改改样式就能work的。
