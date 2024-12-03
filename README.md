@@ -15,12 +15,6 @@ pandoc 不设置模板导出 docx 的样式
 
 设置本模板导出 docx 的样式
 ![](https://raw.githubusercontent.com/Achuan-2/PicBed/pic/assets/20231215114500-2023-12-15.png)
-## 模板分享
-
-有两个模板，一个标题自动编号，一个不自动编号，按需选用。
-
-* Github：[Achuan-2/pandoc_word_template ](https://github.com/Achuan-2/pandoc_word_template)
-* 蓝奏云：[https://achuan.lanzoul.com/b0f5y8sja](https://achuan.lanzoul.com/b0f5y8sja) （密码:a8om）
 
 
 ## 如何使用此模板
