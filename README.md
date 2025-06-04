@@ -29,6 +29,11 @@ pandoc 不设置模板导出 docx 的样式
 pandoc --reference-doc template.docx -s input.md  -o output.docx
 ```
 
+pandoc默认的图片标题是alt文本，如果要修改图片标题为title文本而不是alt文本，请用
+```bash
+pandoc --reference-doc template.docx -s input.md  -o output.docx --lua-filter image-title-to-caption.lua
+```
+
 
 
 ## 如何修改此模板
