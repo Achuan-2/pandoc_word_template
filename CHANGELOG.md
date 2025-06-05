@@ -1,3 +1,13 @@
+
+## 2025.06.05
+
+- 💄 style(样式): compact样式由居中改为居左，因为md转docx的列表样式会包含compact（html貌似不会）
+- ✨ 添加image-title-to-caption.lua，pandoc默认的图片标题是alt文本，如果要修改图片标题为title文本而不是alt文本，可以用该lua脚本
+    ```bash
+    pandoc --reference-doc template.docx -s input.md  -o output.docx --lua-filter image-title-to-caption.lua
+    ```
+    相关博客：https://www.achuan-2.top/post/pandoc-exports-markdown-as-docx-how-to-modify-image-title-to-title-text-instead-of-alt-text-19kkpr.html
+
 ## 2024.12.03
 
 - ✨ 改进代码块样式：代码块左缩进三个字符，字体为五号字体，这样与普通段落更对齐
