@@ -45,7 +45,7 @@ pandoc --reference-doc template.docx -s input.md  -o output.docx
 | :--------------------: | :--------------------: | :-----------------------------------------------------------------------------: |
 |正文文本|在正文段落中应用|首行缩进，<br />字号小四，中文字体为宋体，英文Times New Roman<br />|
 |First Paragraph|段落首段|首行缩进，<br />字号小四，中文字体为宋体，英文Times New Roman<br />|
-|Compact|表格单元格|字号10，中文字体为宋体，英文Times New Roman|
+|Compact|表格单元格、列表样式|字号10，中文字体为宋体，英文Times New Roman|
 |Heading 1（标题1）|一级标题|字号小二，加粗，中文字体为黑体，英文Times New Roman，<br />段前24 磅，段后24 磅<br />|
 |Heading 2（标题2）|二级标题|字号三号，加粗，中文字体为黑体，英文Times New Roman|
 |Heading 3（标题3）|三级标题|字号13，加粗，中文字体为黑体，英文Times New Roman|
