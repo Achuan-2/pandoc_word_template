@@ -1,70 +1,56 @@
 -- image-title-to-caption.lua
--- A Pandoc Lua filter to set image title as caption
--- Format: ![alt](src "title")
+-- Pandoc Lua过滤器，将图片标题设置为caption，并在只有alt文本时确保无caption
 
--- Function to create a new caption from text
+-- 创建caption的函数
 function create_caption(text)
-    -- For simple captions, we can just use a Str element
     if text:find("^%s*$") then
-        -- Empty caption
         return {}
     else
-        -- Non-empty caption
         return {pandoc.Str(text)}
     end
 end
 
--- Function to process the image and set title as caption
-function process_image(img)
-
-    -- Check if title exists and is not empty
-    if img.title and img.title ~= "" then
-        
-        -- Set the title as the image caption
-        img.caption = create_caption(img.title)
-        
-        -- Clear the title to avoid duplication
-        img.title = ""
-        
-        -- Return the modified image
-        return img
+-- 处理Para块
+function Para(para)
+    -- 检查段落是否只包含一个图片
+    if #para.content == 1 and para.content[1].t == "Image" then
+        local img = para.content[1]
+        -- 如果图片有标题，将其包装为Figure并将标题设为caption
+        if img.title and img.title ~= "" then
+            local content = {pandoc.Plain({img})}
+            local caption = create_caption(img.title)
+            return pandoc.Figure(content, caption)
+        else
+            -- 如果只有alt文本（无标题），确保不生成caption
+            img.caption = {}
+            return pandoc.Para({img})
+        end
     end
-    
-    -- If no title, return the image unchanged
-    return img
+    -- 如果不是单独的图片，返回未更改的段落
+    return para
 end
 
--- Handler for standalone images
-function Image(img)
-    return process_image(img)
-end
-
--- Handler for Figure blocks (which may contain images)
+-- 处理Figure块
 function Figure(fig)
-    -- Check if the figure has an image
+    -- 查找Figure中的图片
     for i, block in ipairs(fig.content) do
         if block.t == "Plain" then
             for j, inline in ipairs(block.content) do
                 if inline.t == "Image" then
-                    -- Process the image
-                    local processed_image = process_image(inline)
-                    -- Update the image in the figure
-                    block.content[j] = processed_image
-                    
-                    -- Also update the figure caption
-                    if processed_image.caption and #processed_image.caption > 0 then
-                        -- Extract the caption text
-                        local caption_text = pandoc.utils.stringify(processed_image.caption)
-                        -- Update the figure caption
-                        fig.caption = create_caption(caption_text)
+                    local img = inline
+                    -- 如果图片有标题，将其设为Figure的caption
+                    if img.title and img.title ~= "" then
+                        fig.caption = create_caption(img.title)
+                    else
+                        -- 如果无标题，确保Figure无caption
+                        fig.caption = {}
                     end
                 end
             end
         end
     end
-    
     return fig
 end
 
--- Return the filter
-return {{Image = Image}, {Figure = Figure}}
+-- 返回过滤器
+return {{Para = Para}, {Figure = Figure}}
