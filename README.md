@@ -86,7 +86,15 @@ pandoc --reference-doc template.docx -s input.md  -o output.docx --lua-filter im
 
 ​![image](https://raw.githubusercontent.com/Achuan-2/PicBed/pic/assets/202312150014510.png)​
 
-‍
+
+
+### 代码块高亮样式
+
+当使用--highlight-style xxx参数导出时，代码块的高亮样式会根据 xxx 的值来决定。pandoc 支持多种高亮样式，如 pygments、breezeDark、tango、zenburn 等。
+具体见[pandoc_highlight](https://github.com/kaityo256/pandoc_highlight).
+
+如果发现代码块高亮样式无法修改，可能是因为word模板的样式包含代码高亮样式，导致无法修改。可以尝试删除模板中的代码高亮样式（Source Code以及所有Tok结尾的样式），然后重新导出。
+
 
 ## 模板已知问题
 
