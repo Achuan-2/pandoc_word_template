@@ -58,7 +58,7 @@ pandoc --reference-doc template.docx -s input.md  -o output.docx --lua-filter im
 |Heading 5（标题5）|五级标题|字号小四，中文字体为黑体，英文Times New Roman|
 |Heading 6（标题6）|六级标题|字号小四，中文字体为黑体，英文Times New Roman|
 |Block Text（文本块）|引述块样式|四周添加1磅边框，左侧设置为6磅粗边框|
-|Source Code|行内代码和代码块样式|底纹设置为灰色，四周添加1磅边框|
+|Source Code|行内代码和代码块样式|四周添加1磅边框|
 
 修改表格样式和列表样式比较特殊
 
@@ -95,6 +95,7 @@ pandoc --reference-doc template.docx -s input.md  -o output.docx --lua-filter im
 
 如果发现代码块高亮样式无法修改，可能是因为word模板的样式包含代码高亮样式，导致无法修改。可以尝试删除模板中的代码高亮样式（Source Code以及所有Tok结尾的样式），然后重新导出。
 
+![1749176940350PixPin_2025-06-06_10-28-00.png](https://fastly.jsdelivr.net/gh/Achuan-2/PicBed@pic/assets/1749176940350PixPin_2025-06-06_10-28-00.png)
 
 ## 模板已知问题
 
