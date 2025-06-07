@@ -7,6 +7,7 @@
 - 本模板仅在Windows端的Office Word进行测试，可能不适合**WPS**和**苹果端的Office**。
 - 自己使用时可以把模板文件内容清空，以减小导出word的文件大小。
 
+
 ## 样式预览
 
 pandoc 不设置模板导出 docx 的样式
@@ -15,6 +16,21 @@ pandoc 不设置模板导出 docx 的样式
 
 设置本模板导出 docx 的样式
 ![](https://raw.githubusercontent.com/Achuan-2/PicBed/pic/assets/20231215114500-2023-12-15.png)
+
+
+## 模板介绍
+
+- 标题编号 or 不编号
+- 列表第二行缩进 or 列表第二行顶格
+    - 列表第二行缩进
+        ![1705299592624Snipaste_2024-01-15_14-19-46.png](https://fastly.jsdelivr.net/gh/Achuan-2/PicBed@pic/assets/1705299592624Snipaste_2024-01-15_14-19-46.png)
+    - 列表第二行顶格效果
+        ![1705299404618Snipaste_2024-01-15_14-16-34.png](https://fastly.jsdelivr.net/gh/Achuan-2/PicBed@pic/assets/1705299404618Snipaste_2024-01-15_14-16-34.png)
+
+- 可设置代码块高亮样式 or 不可设置代码块高亮样式
+  - 不可设置代码块高亮样式默认高亮样式为pygments，由于带有Tok为结尾的样式，无法使用--highlight-style参数设置代码块高亮样式
+  - 可设置代码块高亮样式的模板没有带有Tok样式，可以使用--highlight-style参数设置代码块高亮样式
+  - pandoc 相关链接：[When pandoc sets a Word template, it cannot set highlight-style · Issue #10896 · jgm/pandoc](https://github.com/jgm/pandoc/issues/10896)
 
 
 ## 如何使用此模板
@@ -46,19 +62,19 @@ pandoc --reference-doc template.docx -s input.md  -o output.docx --lua-filter im
 
 一般样式如下：
 
-|样式名|描述|默认样式|
-| :--------------------: | :--------------------: | :-----------------------------------------------------------------------------: |
-|正文文本|在正文段落中应用|首行缩进，<br />字号小四，中文字体为宋体，英文Times New Roman<br />|
-|First Paragraph|段落首段|首行缩进，<br />字号小四，中文字体为宋体，英文Times New Roman<br />|
-|Compact|表格单元格、列表样式|字号10，中文字体为宋体，英文Times New Roman|
-|Heading 1（标题1）|一级标题|字号小二，加粗，中文字体为黑体，英文Times New Roman，<br />段前24 磅，段后24 磅<br />|
-|Heading 2（标题2）|二级标题|字号三号，加粗，中文字体为黑体，英文Times New Roman|
-|Heading 3（标题3）|三级标题|字号13，加粗，中文字体为黑体，英文Times New Roman|
-|Heading 4（标题4）|四级标题|字号小四，中文字体为黑体，英文Times New Roman|
-|Heading 5（标题5）|五级标题|字号小四，中文字体为黑体，英文Times New Roman|
-|Heading 6（标题6）|六级标题|字号小四，中文字体为黑体，英文Times New Roman|
-|Block Text（文本块）|引述块样式|四周添加1磅边框，左侧设置为6磅粗边框|
-|Source Code|行内代码和代码块样式|四周添加1磅边框|
+|        样式名        |         描述         |                                       默认样式                                        |
+| :------------------: | :------------------: | :-----------------------------------------------------------------------------------: |
+|       正文文本       |   在正文段落中应用   |          首行缩进，<br />字号小四，中文字体为宋体，英文Times New Roman<br />          |
+|   First Paragraph    |       段落首段       |          首行缩进，<br />字号小四，中文字体为宋体，英文Times New Roman<br />          |
+|       Compact        | 表格单元格、列表样式 |                      字号10，中文字体为宋体，英文Times New Roman                      |
+|  Heading 1（标题1）  |       一级标题       | 字号小二，加粗，中文字体为黑体，英文Times New Roman，<br />段前24 磅，段后24 磅<br /> |
+|  Heading 2（标题2）  |       二级标题       |                  字号三号，加粗，中文字体为黑体，英文Times New Roman                  |
+|  Heading 3（标题3）  |       三级标题       |                   字号13，加粗，中文字体为黑体，英文Times New Roman                   |
+|  Heading 4（标题4）  |       四级标题       |                     字号小四，中文字体为黑体，英文Times New Roman                     |
+|  Heading 5（标题5）  |       五级标题       |                     字号小四，中文字体为黑体，英文Times New Roman                     |
+|  Heading 6（标题6）  |       六级标题       |                     字号小四，中文字体为黑体，英文Times New Roman                     |
+| Block Text（文本块） |      引述块样式      |                         四周添加1磅边框，左侧设置为6磅粗边框                          |
+|     Source Code      | 行内代码和代码块样式 |                                    四周添加1磅边框                                    |
 
 修改表格样式和列表样式比较特殊
 
@@ -105,7 +121,7 @@ pandoc --reference-doc template.docx -s input.md  -o output.docx --lua-filter im
 
     ```markdown
     | header 1 | header 2 |
-    | :--------: | :--------: |
+    | :------: | :------: |
     |  cell 1  |  cell 2  |
     |  cell 3  |  cell 4  |
     |  cell 5  |  cell 6  |
