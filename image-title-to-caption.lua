@@ -1,4 +1,5 @@
--- image-title-to-caption.lua
+-- Author: Achuan-2
+-- https://github.com/Achuan-2/pandoc_word_template/edit/main/image-title-to-caption.lua
 -- Pandoc Lua过滤器，将图片标题设置为caption，并在只有alt文本时确保无caption
 
 -- 创建caption的函数
