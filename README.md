@@ -99,12 +99,12 @@ Agent 安装Skill方式：
 方式二：人工手动安装
 - Codex
 
-  打开`C:\Users\Achuan-2\.codex\skills`文件夹，存放本Skill相关文件
+  创建并打开`%USERPROFILE%\.codex\skills\pandoc-docx-template`文件夹，存放本Skill相关文件
 
   <img alt="PixPin_2026-05-17_18-14-59" src="https://assets.b3logfile.com/siyuan/1610205759005/assets/PixPin_2026-05-17_18-14-59-20260517181501-phkv6e5.png" />
 - Claude Code
 
-  打开`C:\Users\Achuan-2.claude\skills`文件夹，存放本Skill相关文件
+  创建并打开`%USERPROFILE%\.claude\skills\pandoc-docx-template`文件夹，存放本Skill相关文件
 
   <img alt="PixPin_2026-05-17_18-17-55" src="https://assets.b3logfile.com/siyuan/1610205759005/assets/PixPin_2026-05-17_18-17-55-20260517181800-k2i6z8j.png" />
 
