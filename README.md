@@ -1,4 +1,12 @@
-<img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Achuan-2/pandoc_docx_template&type=Date" />
+## Star History
+
+<a href="https://www.star-history.com/?repos=Achuan-2%2Fpandoc_docx_template&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Achuan-2/pandoc_docx_template&type=date&theme=dark&legend=top-left&sealed_token=3yf6BizOWcOhV9m8ZDq_IV6I7udWM7ZeUtLv5jmby0wBpkuiSRDIIA2KbSLIpHNJgG2-WEOrDgP3o7L3c1JaQtmC90Ei2CuFN4EyczkRXEtO4OJwSIG3Iw1WpAuwVTbLIL4x90irpaK66E-MDIE3LgXOdIXjrrRuv7258hLS3IqEZSxV1ZfV-4pWlruo" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Achuan-2/pandoc_docx_template&type=date&legend=top-left&sealed_token=3yf6BizOWcOhV9m8ZDq_IV6I7udWM7ZeUtLv5jmby0wBpkuiSRDIIA2KbSLIpHNJgG2-WEOrDgP3o7L3c1JaQtmC90Ei2CuFN4EyczkRXEtO4OJwSIG3Iw1WpAuwVTbLIL4x90irpaK66E-MDIE3LgXOdIXjrrRuv7258hLS3IqEZSxV1ZfV-4pWlruo" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Achuan-2/pandoc_docx_template&type=date&legend=top-left&sealed_token=3yf6BizOWcOhV9m8ZDq_IV6I7udWM7ZeUtLv5jmby0wBpkuiSRDIIA2KbSLIpHNJgG2-WEOrDgP3o7L3c1JaQtmC90Ei2CuFN4EyczkRXEtO4OJwSIG3Iw1WpAuwVTbLIL4x90irpaK66E-MDIE3LgXOdIXjrrRuv7258hLS3IqEZSxV1ZfV-4pWlruo" />
+ </picture>
+</a>
 
 > 大多数 Markdown 笔记应用程序使用 Pandoc 将笔记转换为 Word 文档，例如我主要使用的思源笔记。然而，Pandoc 默认导出的 Word 文档样式往往不美观，不符合中文排版习惯。
 >
